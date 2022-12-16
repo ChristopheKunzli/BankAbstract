@@ -15,9 +15,18 @@ namespace BankAbstract
             this.rateInterest = rateInterest;
         }
 
+        public override void Withdraw(float amount)
+        {
+            if (amount < 0) throw new AmountLowerThanZeroException();
+            if (balance < amount) throw new BalanceTooLowException();
+            balance -= amount;
+        }
+
         public float Interest(bool IntegratedInterest)
         {
-            throw new NotImplementedException();
+            float interest = (balance * rateInterest) / (float)100.0;
+            if (IntegratedInterest) balance += interest;
+            return interest;
         }
     }
 }

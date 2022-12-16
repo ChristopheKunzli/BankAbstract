@@ -23,12 +23,7 @@ namespace BankAbstract
             this.creationDate = creationDate;
         }
 
-        public void Withdraw(float amount)
-        {
-            if (amount < 0) throw new AmountLowerThanZeroException();
-            if (balance < amount) throw new BalanceTooLowException();
-            balance -= amount;
-        }
+        public abstract void Withdraw(float amount);        
 
         public void Deposit(float amount)
         {
