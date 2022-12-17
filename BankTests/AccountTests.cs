@@ -10,7 +10,7 @@ namespace BankTests
         public void Setup()
         {
             acc1 = new CommonAccount(50, "4234234", 100, DateTime.Now);
-            acc2 = new CommonAccount(50, "4234234", 30, DateTime.Now);
+            acc2 = new CommonAccount(40, "4234234", 30, DateTime.Now);
         }
 
         [Test]
@@ -61,6 +61,39 @@ namespace BankTests
                     delegate () { acc1.Transfer(20, null); });
         }
 
+        [Test]
+        public void Withdraw_basecase_Success()
+        {
+            float withdrawAmount = 30;
+            float expectedBalance = acc1.Balance - withdrawAmount;
 
+            acc1.Withdraw(30);
+
+            float actualBalance = acc1.Balance;
+
+            Assert.AreEqual(expectedBalance, actualBalance);
+        }
+
+        [Test]
+        public void Withdraw_AmountBelowZerol_Failure()
+        {
+            Assert.Throws<AmountLowerThanZeroException>(
+                    delegate () { acc1.Withdraw(-20); });
+        }
+
+        [Test]
+        public void Withdraw_AmountAboveLimitl_Failure()
+        {
+            Assert.Throws<OverdraftLimitHitException>(
+                    delegate () { acc1.Withdraw(60); });
+        }
+
+        [Test]
+        public void Withdraw_balanceTooLowl_Failure()
+        {
+            Account acc3 = new CommonAccount(100, "24424", 40, DateTime.Now);
+            Assert.Throws<BalanceTooLowException>(
+                    delegate () { acc3.Withdraw(60); });
+        }
     }
 }
