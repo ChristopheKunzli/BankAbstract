@@ -32,7 +32,9 @@ namespace BankAbstract
         }
 
         public void Transfer(float amount, Account acc)
-        { 
+        {
+            if (acc == null) throw new AccountNotExistingException();
+            Withdraw(amount);
             acc.Deposit(amount);
         }
 

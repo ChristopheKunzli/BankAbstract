@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="CommonAccount.cs" />
+    <Compile Include="Exceptions\AccountNotExistingException.cs" />
     <Compile Include="Exceptions\AmountLowerThanZeroException.cs" />
     <Compile Include="Exceptions\AmoutTooHighException.cs" />
     <Compile Include="Exceptions\BalanceTooLowException.cs" />
