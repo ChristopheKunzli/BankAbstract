@@ -17,6 +17,13 @@ namespace BankAbstract
         public int? NbHour { get { return nbHour; } }
         public int? PercentageAddHour { get { return percentageAddHour; } }
 
+        /// <summary>
+        /// Constructor for an hour employee 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="firstName"></param>
+        /// <param name="birthDate"></param>
+        /// <param name="department"></param>
         public HourEmployee(string name, string firstName, DateTime birthDate, int department) : base(name, firstName, birthDate, department) { }
 
         public override double? GetSalary()
