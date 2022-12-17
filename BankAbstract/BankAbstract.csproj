@@ -49,6 +49,9 @@
     <Compile Include="Exceptions\BalanceTooLowException.cs" />
     <Compile Include="Exceptions\OverdraftLimitHitException.cs" />
     <Compile Include="People\Customer.cs" />
+    <Compile Include="People\Employees\BankEmployee.cs" />
+    <Compile Include="People\Employees\CommercialEmployee.cs" />
+    <Compile Include="People\Employees\HourEmployee.cs" />
     <Compile Include="People\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Accounts\SavingAccount.cs" />

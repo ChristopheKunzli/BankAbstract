@@ -11,8 +11,8 @@ namespace BankAbstract
         private double turnover;
         private double fix;
 
-        public double Turnover { get { return turnover; } set { turnover = value; } }
-        public double Fix { get { return fix; } set { fix = value; } }
+        public double Turnover { get { return turnover; } }
+        public double Fix { get { return fix; } }
 
         public CommercialEmployee(string name, string firstName, DateTime birthDate, int department, double turnover, double fix) : base(name, firstName, birthDate, department) 
         {
@@ -23,6 +23,12 @@ namespace BankAbstract
         public override double GetSalary() 
         {
             return fix + (turnover / 100);
+        }
+
+        public void SetInfoSalary(double turnover, double fix)
+        {
+            this.turnover = turnover;
+            this.fix = fix;
         }
     }
 }
