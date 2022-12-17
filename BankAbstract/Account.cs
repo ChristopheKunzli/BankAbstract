@@ -23,14 +23,29 @@ namespace BankAbstract
             this.creationDate = creationDate;
         }
 
+        /// <summary>
+        /// Withdraws money from an account
+        /// </summary>
+        /// <param name="amount"></param>
         public abstract void Withdraw(float amount);        
 
+        /// <summary>
+        /// Deposit money in an account
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <exception cref="AmountLowerThanZeroException"></exception>
         public void Deposit(float amount)
         {
             if (amount < 0) throw new AmountLowerThanZeroException();
             balance += amount;
         }
 
+        /// <summary>
+        /// Transfer moneey from an account to another
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <param name="acc"></param>
+        /// <exception cref="AccountNotExistingException"></exception>
         public void Transfer(float amount, Account acc)
         {
             if (acc == null) throw new AccountNotExistingException();

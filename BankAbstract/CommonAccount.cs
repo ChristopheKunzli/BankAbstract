@@ -15,6 +15,13 @@ namespace BankAbstract
             this.overdraftLimit = overdraftLimit;
         }
 
+        /// <summary>
+        /// Withdraw money from a common account
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <exception cref="OverdraftLimitHitException"></exception>
+        /// <exception cref="AmountLowerThanZeroException"></exception>
+        /// <exception cref="BalanceTooLowException"></exception>
         public override void Withdraw(float amount)
         {
             if (amount > overdraftLimit) throw new OverdraftLimitHitException();
