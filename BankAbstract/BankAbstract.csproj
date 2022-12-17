@@ -48,6 +48,7 @@
     <Compile Include="Exceptions\AmoutTooHighException.cs" />
     <Compile Include="Exceptions\BalanceTooLowException.cs" />
     <Compile Include="Exceptions\OverdraftLimitHitException.cs" />
+    <Compile Include="Exceptions\SalaryInformationMissingException.cs" />
     <Compile Include="People\Customer.cs" />
     <Compile Include="People\Employees\BankEmployee.cs" />
     <Compile Include="People\Employees\CommercialEmployee.cs" />

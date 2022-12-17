@@ -8,20 +8,18 @@ namespace BankAbstract
 {
     public class CommercialEmployee : BankEmployee
     {
-        private double turnover;
-        private double fix;
+        private double? turnover = null;
+        private double? fix = null;
 
-        public double Turnover { get { return turnover; } }
-        public double Fix { get { return fix; } }
+        public double? Turnover { get { return turnover; } }
+        public double? Fix { get { return fix; } }
 
-        public CommercialEmployee(string name, string firstName, DateTime birthDate, int department, double turnover, double fix) : base(name, firstName, birthDate, department) 
+        public CommercialEmployee(string name, string firstName, DateTime birthDate, int department) : base(name, firstName, birthDate, department) { }
+
+        public override double? GetSalary() 
         {
-            this.turnover = turnover;
-            this.fix = fix;
-        }
+            if (turnover == null || fix == null) throw new SalaryInformationMissingException();
 
-        public override double GetSalary() 
-        {
             return fix + (turnover / 100);
         }
 

@@ -17,6 +17,6 @@ namespace BankAbstract
             this.department = department;
         }
 
-        public abstract double GetSalary();
+        public abstract double? GetSalary();
     }
 }
