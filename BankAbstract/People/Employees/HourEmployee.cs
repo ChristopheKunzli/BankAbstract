@@ -12,9 +12,9 @@ namespace BankAbstract
         private int nbHour;
         private int percentageAddHour;
 
-        public double SalaryPerHour { get { return salaryPerHour; } }
-        public int NbHour { get { return nbHour; } }
-        public int PercentageAddHour { get { return percentageAddHour; } }
+        public double SalaryPerHour { get { return salaryPerHour; } set { salaryPerHour = value; } }
+        public int NbHour { get { return nbHour; } set { nbHour = value; } }
+        public int PercentageAddHour { get { return percentageAddHour; }set { percentageAddHour = value; } }
 
         public HourEmployee(string name, string firstName, DateTime birthDate, int department, double salaryPerHour, int nbHour, int percentageAddHour) : base(name, firstName, birthDate, department) 
         {
