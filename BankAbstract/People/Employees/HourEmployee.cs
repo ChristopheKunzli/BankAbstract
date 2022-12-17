@@ -18,9 +18,9 @@ namespace BankAbstract
 
         public HourEmployee(string name, string firstName, DateTime birthDate, int department, double salaryPerHour, int nbHour, int percentageAddHour) : base(name, firstName, birthDate, department) 
         {
-            this.salaryPerHour= salaryPerHour;
-            this.nbHour= nbHour;
-            this.percentageAddHour= percentageAddHour;
+            this.salaryPerHour = salaryPerHour;
+            this.nbHour = nbHour;
+            this.percentageAddHour = percentageAddHour;
         }
 
         public override double GetSalary()
