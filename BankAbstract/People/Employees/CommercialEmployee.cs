@@ -16,6 +16,11 @@ namespace BankAbstract
 
         public CommercialEmployee(string name, string firstName, DateTime birthDate, int department) : base(name, firstName, birthDate, department) { }
 
+        /// <summary>
+        /// Calculates the salary of an employee paid for each sale they make
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="SalaryInformationMissingException"></exception>
         public override double? GetSalary() 
         {
             if (turnover == null || fix == null) throw new SalaryInformationMissingException();
@@ -23,6 +28,11 @@ namespace BankAbstract
             return fix + (turnover / 100);
         }
 
+        /// <summary>
+        /// Sets all information relative to the employee's salary
+        /// </summary>
+        /// <param name="turnover"></param>
+        /// <param name="fix"></param>
         public void SetInfoSalary(double turnover, double fix)
         {
             this.turnover = turnover;
