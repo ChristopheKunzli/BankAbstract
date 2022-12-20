@@ -29,5 +29,14 @@ namespace BankAbstract
         /// </summary>
         /// <returns>the salary</returns>
         public abstract double? GetSalary();
+
+        /// <summary>
+        /// Show the summary of a generic employee
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString() + $"; Department: {department}";
+        }
     }
 }

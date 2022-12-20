@@ -52,5 +52,14 @@ namespace BankAbstract
             this.nbHour = nbHour;
             this.percentageAddHour = percentageAddHour;
         }
+
+        /// <summary>
+        /// Show a summary and salary of an employee pad hourly
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString() + $";Type of employee : Hourly; Current week salary: {GetSalary()}";
+        }
     }
 }

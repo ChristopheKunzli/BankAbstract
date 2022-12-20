@@ -38,5 +38,14 @@ namespace BankAbstract
             this.turnover = turnover;
             this.fix = fix;
         }
+
+        /// <summary>
+        /// Show a summary and salary of a commercial employee
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString() + $";Type of employee: Commercial ; Curent week salary: {GetSalary()}";
+        }
     }
 }
