@@ -39,5 +39,14 @@ namespace BankAbstract
             if (IntegratedInterest) balance += interest;
             return interest;
         }
+
+        /// <summary>
+        /// Show summary of a savingAccount
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString() + $"; Interest rate: {rateInterest}%";
+        }
     }
 }

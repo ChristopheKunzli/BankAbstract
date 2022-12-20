@@ -30,5 +30,14 @@ namespace BankAbstract
             if (balance < amount) throw new BalanceTooLowException();
             balance -= amount;
         }
+
+        /// <summary>
+        /// Show a summary of a CommonAccount
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString() + $"; Overdraft limit: {overdraftLimit}";
+        }
     }
 }

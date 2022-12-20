@@ -28,5 +28,10 @@ namespace BankAbstract
             this.firstName = firstName;
             this.birthDate = birthDate;
         }
+
+        public override string ToString()
+        {
+            return $"Full name: {name} {firstName}; BirthDate: {birthDate}";
+        }
     }
 }

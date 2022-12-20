@@ -53,9 +53,13 @@ namespace BankAbstract
             acc.Deposit(amount);
         }
 
+        /// <summary>
+        /// Show a generic summary of an account
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            return "ref: " + reference + ";balance: " + balance + ";creationDate: " + creationDate.ToString();
+            return $"Reference: {reference}; Current Balance: ${balance}; Date of creation: {creationDate}";
         }
     }
 }
