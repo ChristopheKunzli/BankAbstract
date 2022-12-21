@@ -1,11 +1,4 @@
-﻿using BankAbstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankTests
+﻿namespace BankTests
 {
     public class EmployeeTests
     {

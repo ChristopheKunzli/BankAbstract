@@ -1,4 +1,3 @@
-using BankAbstract;
 namespace BankTests
 {
     public class AccountTests
