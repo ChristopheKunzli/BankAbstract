@@ -33,7 +33,7 @@ namespace BankAbstract
         /// </summary>
         /// <param name="IntegratedInterest"></param>
         /// <returns>the interest amoun</returns>
-        public float Interest(bool IntegratedInterest)
+        public float Interest(bool IntegratedInterest = false)
         {
             float interest = (balance * rateInterest) / (float)100.0;
             if (IntegratedInterest) balance += interest;

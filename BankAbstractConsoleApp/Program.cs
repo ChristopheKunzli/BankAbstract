@@ -12,6 +12,9 @@ SavingAccount savAcc = new SavingAccount(10, "525345", 200, DateTime.Now);
 customer.AddAccount(savAcc);
 
 comAcc.Withdraw(30);
+comAcc.Transfer(50, savAcc);
+
+savAcc.Interest(true);
 
 foreach(Account acc in customer.LstAccount)
 {
