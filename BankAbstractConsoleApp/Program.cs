@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BankAbstract;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Bienvenu dans notre banque");
 
 Customer customer = new Customer("Paul", "Jean", new DateTime(1997, 9, 25), true);
 
