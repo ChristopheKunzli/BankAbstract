@@ -11,6 +11,8 @@ namespace BankAbstract
         private bool isPrivate;
         private List<Account> lstAccount;
 
+        public List<Account> LstAccount { get { return lstAccount; } }
+
         public Customer(string name, string firstName, DateTime birthDate, bool isPrivate, List<Account> existingList = null) : base (name, firstName, birthDate )
         {
             this.isPrivate= isPrivate;
