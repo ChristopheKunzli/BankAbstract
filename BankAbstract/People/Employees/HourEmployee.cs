@@ -13,6 +13,8 @@ namespace BankAbstract
         private int? nbHour;
         private int? percentageAddHour;
 
+        private const int NB_HOUR_PER_WEEK = 40;
+
         public double? SalaryPerHour { get { return salaryPerHour; } }
         public int? NbHour { get { return nbHour; } }
         public int? PercentageAddHour { get { return percentageAddHour; } }
@@ -35,9 +37,9 @@ namespace BankAbstract
         {
             if (salaryPerHour == null || nbHour == null || percentageAddHour == null) throw new SalaryInformationMissingException();
 
-            if (nbHour <= 40) return salaryPerHour * nbHour;
+            if (nbHour <= NB_HOUR_PER_WEEK) return salaryPerHour * nbHour;
 
-            return (40 * salaryPerHour) + ((nbHour - 40) * (salaryPerHour + ( salaryPerHour * percentageAddHour / 100.0))) ;
+            return (NB_HOUR_PER_WEEK * salaryPerHour) + ((nbHour - NB_HOUR_PER_WEEK) * (salaryPerHour + ( salaryPerHour * percentageAddHour / 100.0))) ;
         }
 
         /// <summary>

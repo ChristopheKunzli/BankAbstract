@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankTests", "BankTests\Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAbstractConsoleApp", "BankAbstractConsoleApp\BankAbstractConsoleApp.csproj", "{FFE7E218-0073-4E47-B7DC-D1A103913510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankForm", "BankForm\BankForm.csproj", "{B216507E-3277-4FCC-B5FD-DA71D949B4A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FFE7E218-0073-4E47-B7DC-D1A103913510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE7E218-0073-4E47-B7DC-D1A103913510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE7E218-0073-4E47-B7DC-D1A103913510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B216507E-3277-4FCC-B5FD-DA71D949B4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B216507E-3277-4FCC-B5FD-DA71D949B4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B216507E-3277-4FCC-B5FD-DA71D949B4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B216507E-3277-4FCC-B5FD-DA71D949B4A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
