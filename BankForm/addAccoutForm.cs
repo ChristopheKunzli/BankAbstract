@@ -21,11 +21,11 @@ namespace BankForm
         {
             if(radCommonAccount.Checked)
             {
-                MessageBox.Show((new CommonAccount((float) numOverdraft.Value, txtRef.Text, (float)numBalance.Value, DateTime.Now).ToString()));
+                MessageBox.Show((new CommonAccount((float) numOverdraft.Value, txtRef.Text, (float) numBalance.Value, DateTime.Now).ToString()));
             }
             else if(radSavingAccount.Checked)
             {
-                MessageBox.Show((new SavingAccount((float)numInterest.Value, txtRef.Text, (float)numBalance.Value, DateTime.Now).ToString()));
+                MessageBox.Show((new SavingAccount((float) numInterest.Value, txtRef.Text, (float) numBalance.Value, DateTime.Now).ToString()));
             }
         }
 

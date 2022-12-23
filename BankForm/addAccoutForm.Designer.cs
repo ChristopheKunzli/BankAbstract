@@ -124,7 +124,7 @@
             // 
             this.panCom.Controls.Add(this.numOverdraft);
             this.panCom.Controls.Add(this.lblOverdraft);
-            this.panCom.Location = new System.Drawing.Point(180, 143);
+            this.panCom.Location = new System.Drawing.Point(12, 122);
             this.panCom.Name = "panCom";
             this.panCom.Size = new System.Drawing.Size(185, 44);
             this.panCom.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.panSaving.Controls.Add(this.label2);
             this.panSaving.Controls.Add(this.numInterest);
             this.panSaving.Controls.Add(this.lblSaving);
-            this.panSaving.Location = new System.Drawing.Point(180, 93);
+            this.panSaving.Location = new System.Drawing.Point(12, 155);
             this.panSaving.Name = "panSaving";
             this.panSaving.Size = new System.Drawing.Size(185, 44);
             this.panSaving.TabIndex = 8;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 225);
+            this.ClientSize = new System.Drawing.Size(232, 225);
             this.Controls.Add(this.panSaving);
             this.Controls.Add(this.panCom);
             this.Controls.Add(this.label1);
